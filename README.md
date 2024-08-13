@@ -4,11 +4,11 @@
 
 - #### windows :
 
-run the `runner.bat` file for generating the api from the swagger file.
+    run the `runner.bat` file for generating the api from the swagger file.
 
 - #### Linux/macOS :
 
-run the `runner.sh` file.
+    run the `runner.sh` file.
 
 > [!TIP]
 > put the swagger file inside the same directory
