@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "fs.promises": "^0.1.2",
+    "openapi3-ts": "^4.3.3",
+    "path": "^0.12.7",
+    "ts": "^0.2.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
