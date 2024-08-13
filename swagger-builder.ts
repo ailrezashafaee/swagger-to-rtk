@@ -217,6 +217,7 @@ const generateApis = async (
 };
 
 async function main() {
+  fsPromise.mkdir('./api/')
   if (!process.argv) {
     console.error("please enter argumenst");
     return;

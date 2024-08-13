@@ -1,0 +1,1271 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "HumanResources.Api",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/hr/dining/v{version}/FoodMenu/ActiveFood": {
+      "put": {
+        "tags": [
+          "FoodMenu"
+        ],
+        "summary": "ÙØ¹Ø§Ù„ Ú©Ø±Ø¯Ù† ÙˆØ¶Ø¹ÛŒØª ØºØ°Ø§",
+        "parameters": [
+          {
+            "name": "foodId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodMenu/AddFood": {
+      "post": {
+        "tags": [
+          "FoodMenu"
+        ],
+        "summary": "Ø§ÙØ²ÙˆØ¯Ù† ØºØ°Ø§",
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewFoodRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewFoodRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewFoodRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodMenu/AddFoodMenu": {
+      "post": {
+        "tags": [
+          "FoodMenu"
+        ],
+        "summary": "ØªØ®ØµÛŒØµ ØºØ°Ø§ Ø¨Ù‡ Ø±ÙˆØ²",
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FoodMenuRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FoodMenuRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FoodMenuRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodMenu/AddFoodSurvey": {
+      "post": {
+        "tags": [
+          "FoodMenu"
+        ],
+        "summary": "Ø§ÙØ²ÙˆØ¯Ù† Ù†Ø¸Ø±Ø³Ù†Ø¬ÛŒ ØºØ°Ø§",
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewFoodSurveyRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewFoodSurveyRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewFoodSurveyRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodMenu/DeleteFood": {
+      "delete": {
+        "tags": [
+          "FoodMenu"
+        ],
+        "summary": "Ø­Ø°Ù ÛŒÚ© ØºØ°Ø§ Ø¨Ù‡ ÙˆØ³ÛŒÙ„Ù‡ Ú©Ø¯ ØºØ°Ø§",
+        "parameters": [
+          {
+            "name": "foodId",
+            "in": "query",
+            "description": "Ú©Ø¯ ØºØ°Ø§",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodMenu/EditeFood": {
+      "put": {
+        "tags": [
+          "FoodMenu"
+        ],
+        "summary": "ÙˆÛŒØ±Ø§ÛŒØ´ ØºØ°Ø§",
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditFoodRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditFoodRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditFoodRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodMenu/EditeFoodMenu": {
+      "put": {
+        "tags": [
+          "FoodMenu"
+        ],
+        "summary": "ÙˆÛŒØ±Ø§ÛŒØ´ ØªØ®ØµÛŒØµ ØºØ°Ø§ Ø¨Ù‡ Ø±ÙˆØ²",
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditeFoodMenuRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditeFoodMenuRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditeFoodMenuRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodMenu/GetFoodById": {
+      "get": {
+        "tags": [
+          "FoodMenu"
+        ],
+        "summary": "Ø¯Ø±ÛŒØ§ÙØª ÛŒÚ© ØºØ°Ø§ Ø¨Ù‡ ÙˆØ³ÛŒÙ„Ù‡ Ø´Ù†Ø§Ø³Ù‡ ØºØ°Ø§",
+        "parameters": [
+          {
+            "name": "foodId",
+            "in": "query",
+            "description": "Ø´Ù†Ø§Ø³Ù‡ ØºØ°Ø§",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodMenu/GetFoodList": {
+      "get": {
+        "tags": [
+          "FoodMenu"
+        ],
+        "summary": "Ø¯Ø±ÛŒØ§ÙØª ØªÙ…Ø§Ù…ÛŒ ØºØ°Ø§ Ù‡Ø§",
+        "parameters": [
+          {
+            "name": "foodName",
+            "in": "query",
+            "description": "Ù†Ø§Ù… ØºØ°Ø§",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "isActive",
+            "in": "query",
+            "description": "ÙˆØ¶Ø¹ÛŒØª ØºØ°Ø§",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "pageIndex",
+            "in": "query",
+            "description": "Ø´Ù…Ø§Ø±Ù‡ ØµÙØ­Ù‡",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "Ø³Ø§ÛŒØ² ØµÙØ­Ù‡",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodMenu/GetFoodMenuByDay": {
+      "get": {
+        "tags": [
+          "FoodMenu"
+        ],
+        "summary": "Ø¯Ø±ÛŒØ§ÙØª Ù…Ù†Ùˆ ØºØ°Ø§ Ø¨Ù‡ ÙˆØ³ÛŒÙ„Ù‡ Ø±ÙˆØ²",
+        "parameters": [
+          {
+            "name": "reserveDay",
+            "in": "query",
+            "description": "Ø±ÙˆØ² Ø±Ø²Ø±Ùˆ ØºØ°Ø§",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodMenu/GetFoodMenuList": {
+      "get": {
+        "tags": [
+          "FoodMenu"
+        ],
+        "summary": "Ø¯Ø±ÛŒØ§ÙØª ØªÙ…Ø§Ù…ÛŒ Ù…Ù†ÙˆÙ‡Ø§ÛŒ ØºØ°Ø§",
+        "parameters": [
+          {
+            "name": "startDay",
+            "in": "query",
+            "description": "ØªØ§Ø±ÛŒØ® Ø§Ø¨ØªØ¯Ø§",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "endDay",
+            "in": "query",
+            "description": "ØªØ§Ø±ÛŒØ® Ø§Ù†ØªÙ‡Ø§",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "allocated",
+            "in": "query",
+            "description": "ÙˆØ¶Ø¹ÛŒØª ØªØ®ØµÛŒØµ",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodMenu/GetFoodSurvey": {
+      "get": {
+        "tags": [
+          "FoodMenu"
+        ],
+        "summary": "Ù†ØªÛŒØ¬Ù‡ Ù†Ø¸Ø± Ø³Ù†Ø¬ÛŒ ØºØ°Ø§",
+        "parameters": [
+          {
+            "name": "foodId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodMenu/GetUserFoodMenuList": {
+      "get": {
+        "tags": [
+          "FoodMenu"
+        ],
+        "summary": "Ø¯Ø±ÛŒØ§ÙØª Ù…Ù†ÙˆÙ‡Ø§ÛŒ ØºØ°Ø§ Ú©Ø§Ø±Ø¨Ø±",
+        "parameters": [
+          {
+            "name": "startDay",
+            "in": "query",
+            "description": "ØªØ§Ø±ÛŒØ® Ø§Ø¨ØªØ¯Ø§",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "endDay",
+            "in": "query",
+            "description": "ØªØ§Ø±ÛŒØ® Ø§Ù†ØªÙ‡Ø§",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "allocated",
+            "in": "query",
+            "description": "ÙˆØ¶Ø¹ÛŒØª ØªØ®ØµÛŒØµ",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodMenu/InactiveFood": {
+      "put": {
+        "tags": [
+          "FoodMenu"
+        ],
+        "summary": "ØºÛŒØ± ÙØ¹Ø§Ù„ Ú©Ø±Ø¯Ù† ÙˆØ¶Ø¹ÛŒØª ØºØ°Ø§",
+        "parameters": [
+          {
+            "name": "foodId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodReservation/AddCancellationFoodReservation": {
+      "post": {
+        "tags": [
+          "FoodReservation"
+        ],
+        "summary": "Ø§Ù†ØµØ±Ø§Ù Ø§Ø² Ø¯Ø±ÛŒØ§ÙØª ØºØ°Ø§",
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancelFoodReserveRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancelFoodReserveRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancelFoodReserveRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodReservation/AddFoodReservation": {
+      "post": {
+        "tags": [
+          "FoodReservation"
+        ],
+        "summary": "Ø±Ø²Ø±Ùˆ ØºØ°Ø§",
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewFoodReserveRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewFoodReserveRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewFoodReserveRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodReservation/DisableFoodReservation": {
+      "delete": {
+        "tags": [
+          "FoodReservation"
+        ],
+        "summary": "Ù„ØºÙˆ Ø±Ø²Ø±Ùˆ ØºØ°Ø§",
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisableFoodReserveRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisableFoodReserveRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisableFoodReserveRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodReservation/FoodReservationExcelReport": {
+      "get": {
+        "tags": [
+          "FoodReservation"
+        ],
+        "summary": "Ú¯Ø²Ø§Ø±Ø´ Ø§Ú©Ø³Ù„ Ù†ØªØ§ÛŒØ¬ Ø±Ø²Ø±Ùˆ ØºØ°Ø§  \r\n<param name=\"startDay\">ØªØ§Ø±ÛŒØ® Ø§Ø¨ØªØ¯Ø§</param><param name=\"endDay\">ØªØ§Ø±ÛŒØ® Ø§Ù†ØªÙ‡Ø§ </param>",
+        "parameters": [
+          {
+            "name": "startDay",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "endDay",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodReservation/FoodReservationReport": {
+      "get": {
+        "tags": [
+          "FoodReservation"
+        ],
+        "summary": "Ú¯Ø²Ø§Ø±Ø´ Ù†ØªØ§ÛŒØ¬ Ø±Ø²Ø±Ùˆ ØºØ°Ø§  \r\n<param name=\"startDay\">ØªØ§Ø±ÛŒØ® Ø§Ø¨ØªØ¯Ø§</param><param name=\"endDay\">ØªØ§Ø±ÛŒØ® Ø§Ù†ØªÙ‡Ø§ </param>",
+        "parameters": [
+          {
+            "name": "startDay",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "endDay",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodReservation/FoodReservationReportTest": {
+      "get": {
+        "tags": [
+          "FoodReservation"
+        ],
+        "summary": "Ú¯Ø²Ø§Ø±Ø´ Ù†ØªØ§ÛŒØ¬ Ø±Ø²Ø±Ùˆ ØºØ°Ø§  \r\n<param name=\"startDay\">ØªØ§Ø±ÛŒØ® Ø§Ø¨ØªØ¯Ø§</param><param name=\"endDay\">ØªØ§Ø±ÛŒØ® Ø§Ù†ØªÙ‡Ø§ </param>",
+        "parameters": [
+          {
+            "name": "startDay",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "endDay",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodReservation/GetCancelFoodReserveReportForMonth": {
+      "get": {
+        "tags": [
+          "FoodReservation"
+        ],
+        "summary": " Ú¯Ø²Ø§Ø±Ø´ Ø§Ù†ØµØ±Ø§Ù Ø§Ø² Ø¯Ø±ÛŒØ§ÙØª ØºØ°Ø§ Ø§Ø¯Ù…ÛŒÙ† \r\n<param name=\"cancelYear\">Ø³Ø§Ù„ Ø§Ù†ØµØ±Ø§Ù</param><param name=\"cancelMonth\">Ù…Ø§Ù‡ Ø§Ù†ØµØ±Ø§Ù</param>",
+        "parameters": [
+          {
+            "name": "cancelYear",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cancelMonth",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodReservation/GetCancellationFoodReservationReportByUser": {
+      "get": {
+        "tags": [
+          "FoodReservation"
+        ],
+        "summary": " Ú¯Ø²Ø§Ø±Ø´ Ø§Ù†ØµØ±Ø§Ù Ø§Ø² Ø¯Ø±ÛŒØ§ÙØª ØºØ°Ø§ Ú©Ø§Ø±Ø¨Ø± \r\n<param name=\"userPersonelCode\">Ú©Ø¯ Ù¾Ø±Ø³Ù†Ù„ÛŒ Ú©Ø§Ø±Ø¨Ø±</param>",
+        "parameters": [
+          {
+            "name": "userPersonelCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodReservation/GetCheckCancelFoodReserveIsValid": {
+      "get": {
+        "tags": [
+          "FoodReservation"
+        ],
+        "summary": "Ø¨Ø±Ø±Ø³ÛŒ Ù…Ø¬Ø§Ø² Ø¨ÙˆØ¯Ù† Ø§Ù†ØµØ±Ø§Ù Ø§Ø² Ø¯Ø±ÛŒØ§ÙØª ØºØ°Ø§",
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodReservation/GetFoodReservationByDay": {
+      "get": {
+        "tags": [
+          "FoodReservation"
+        ],
+        "summary": "Ø¯Ø±ÛŒØ§ÙØª Ù†ØªÛŒØ¬Ù‡ Ø±Ø²Ø±Ùˆ ØºØ°Ø§ Ø¨Ù‡ ÙˆØ³ÛŒÙ„Ù‡ Ø±ÙˆØ²",
+        "parameters": [
+          {
+            "name": "userPersonalCode",
+            "in": "query",
+            "description": "Ú©Ø¯ Ù¾Ø±Ø³Ù†Ù„ÛŒ Ú©Ø§Ø±Ø¨Ø±",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "foodReserveDay",
+            "in": "query",
+            "description": "Ø±ÙˆØ² Ø±Ø²Ø±Ùˆ ØºØ°Ø§",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodReservation/GetFoodReservationList": {
+      "get": {
+        "tags": [
+          "FoodReservation"
+        ],
+        "summary": "Ù„ÛŒØ³Øª Ø±Ø²Ø±Ùˆ Ù‡Ø§ÛŒ Ú©Ø§Ø±Ø¨Ø± Ø¯Ø± ÛŒÚ© Ø¨Ø§Ø²Ù‡ Ø²Ù…Ø§Ù†ÛŒ",
+        "parameters": [
+          {
+            "name": "userPersonelCode",
+            "in": "query",
+            "description": "Ú©Ø¯ Ù¾Ø±Ø³Ù†Ù„ÛŒ Ú©Ø§Ø±Ø¨Ø±",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "startDay",
+            "in": "query",
+            "description": "ØªØ§Ø±ÛŒØ® Ø§Ø¨ØªØ¯Ø§",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "endDay",
+            "in": "query",
+            "description": "ØªØ§Ø±ÛŒØ® Ø§Ù†ØªÙ‡Ø§",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/hr/dining/v{version}/FoodReservation/RefuseCancellationFoodReservation": {
+      "post": {
+        "tags": [
+          "FoodReservation"
+        ],
+        "summary": "Ù„ØºÙˆ Ø§Ù†ØµØ±Ø§Ù Ø§Ø² Ø¯Ø±ÛŒØ§ÙØª ØºØ°Ø§",
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefuseCancelFoodReserveRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefuseCancelFoodReserveRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefuseCancelFoodReserveRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CancelFoodReserveRequest": {
+        "required": [
+          "userPersonelCode"
+        ],
+        "type": "object",
+        "properties": {
+          "userPersonelCode": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Ú©Ø¯ Ù¾Ø±Ø³Ù†Ù„ÛŒ Ú©Ø§Ø±Ø¨Ø±"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DisableFoodReserveRequest": {
+        "required": [
+          "userPersonelCode"
+        ],
+        "type": "object",
+        "properties": {
+          "userPersonelCode": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Ú©Ø¯ Ù¾Ø±Ø³Ù†Ù„ÛŒ Ú©Ø§Ø±Ø¨Ø±"
+          },
+          "foodReserveDay": {
+            "type": "string",
+            "description": "ØªØ§Ø±ÛŒØ® Ø±Ø²Ø±Ùˆ",
+            "format": "date"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EditFoodRequest": {
+        "required": [
+          "FoodName",
+          "Id"
+        ],
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "string",
+            "description": "Ø´Ù†Ø§Ø³Ù‡ ØºØ°Ø§",
+            "format": "uuid"
+          },
+          "FoodName": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Ù†Ø§Ù… ØºØ°Ø§"
+          },
+          "ImageObjectName": {
+            "type": "string",
+            "description": "Ù†Ø§Ù… Ø¹Ú©Ø³",
+            "nullable": true
+          },
+          "ImageObjectSize": {
+            "type": "string",
+            "description": "Ø³Ø§ÛŒØ² Ø¹Ú©Ø³",
+            "nullable": true
+          },
+          "BucketName": {
+            "type": "string",
+            "description": "Ù†Ø§Ù… Ø¨Ø§Ú©Øª",
+            "nullable": true
+          },
+          "ImageObjectEtage": {
+            "type": "string",
+            "description": "ØªÚ¯ Ø¹Ú©Ø³",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EditeFoodMenuRequest": {
+        "required": [
+          "FoodReserveDay",
+          "Foods",
+          "IsDeleted"
+        ],
+        "type": "object",
+        "properties": {
+          "FoodReserveDay": {
+            "type": "string",
+            "description": "Ø±ÙˆØ² Ø±Ø²Ø±Ùˆ ØºØ°Ø§",
+            "format": "date"
+          },
+          "Foods": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "description": "Ù„ÛŒØ³Øª ØºØ°Ø§Ù‡Ø§"
+          },
+          "IsDeleted": {
+            "type": "boolean",
+            "description": "Ø­Ø°Ù ØªØ®ØµÛŒØµ"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FoodMenuRequest": {
+        "required": [
+          "FoodReserveDay",
+          "Foods"
+        ],
+        "type": "object",
+        "properties": {
+          "FoodReserveDay": {
+            "type": "string",
+            "description": "Ø±ÙˆØ² Ø±Ø²Ø±Ùˆ ØºØ°Ø§",
+            "format": "date"
+          },
+          "Foods": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "description": "Ù„ÛŒØ³Øª ØºØ°Ø§Ù‡Ø§"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NewFoodRequest": {
+        "required": [
+          "FoodName",
+          "IsActive"
+        ],
+        "type": "object",
+        "properties": {
+          "FoodName": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Ù†Ø§Ù… ØºØ°Ø§"
+          },
+          "ImageObjectName": {
+            "type": "string",
+            "description": "Ù†Ø§Ù… Ø¹Ú©Ø³",
+            "nullable": true
+          },
+          "ImageObjectSize": {
+            "type": "string",
+            "description": "Ø³Ø§ÛŒØ² Ø¹Ú©Ø³",
+            "nullable": true
+          },
+          "BucketName": {
+            "type": "string",
+            "description": "Ù†Ø§Ù… Ø¨Ø§Ú©Øª",
+            "nullable": true
+          },
+          "ImageObjectEtage": {
+            "type": "string",
+            "description": "ØªÚ¯ Ø¹Ú©Ø³",
+            "nullable": true
+          },
+          "IsActive": {
+            "type": "boolean",
+            "description": "ÙˆØ¶Ø¹ÛŒØª Ø§Ù„Ø²Ø§Ù…ÛŒ"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NewFoodReserveRequest": {
+        "required": [
+          "FoodMenuId",
+          "userPersonelCode"
+        ],
+        "type": "object",
+        "properties": {
+          "userPersonelCode": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Ú©Ø¯ Ù¾Ø±Ø³Ù†Ù„ÛŒ Ú©Ø§Ø±Ø¨Ø±"
+          },
+          "FoodMenuId": {
+            "type": "string",
+            "description": "Ù…Ù†Ùˆ ØºØ°Ø§",
+            "format": "uuid"
+          },
+          "foodReserveDay": {
+            "type": "string",
+            "description": "ØªØ§Ø±ÛŒØ® Ø±Ø²Ø±Ùˆ",
+            "format": "date"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NewFoodSurveyRequest": {
+        "required": [
+          "FoodId",
+          "Score",
+          "userPersonelCode"
+        ],
+        "type": "object",
+        "properties": {
+          "FoodId": {
+            "type": "string",
+            "description": "Ø´Ù†Ø§Ø³Ù‡ ØºØ°Ø§",
+            "format": "uuid"
+          },
+          "userPersonelCode": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Ú©Ø¯ Ù¾Ø±Ø³Ù†Ù„ÛŒ Ú©Ø§Ø±Ø¨Ø±"
+          },
+          "Score": {
+            "type": "integer",
+            "description": "Ø§Ù…ØªÛŒØ§Ø² ØºØ°Ø§",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RefuseCancelFoodReserveRequest": {
+        "required": [
+          "userPersonelCode"
+        ],
+        "type": "object",
+        "properties": {
+          "userPersonelCode": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Ú©Ø¯ Ù¾Ø±Ø³Ù†Ù„ÛŒ Ú©Ø§Ø±Ø¨Ø±"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "bearer": {
+        "type": "http",
+        "description": "Bearer Authorization header using the Bearer scheme.",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearer": []
+    }
+  ]
+}
